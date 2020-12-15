@@ -7,9 +7,9 @@ pop_file=${WORK}/datasets_main/CESM/CESM_PI_GMD2020EXCPL_1stSPINUP/TandS_B1850BP
 CAM_file=${WORK}/datasets_main/CESM/CESM_PI_GMD2020EXCPL_1stSPINUP/B1850BPRP.forpub2018.01.hlrn.cam.h0.0291to0300_clim.nc
 TempStdDevFile=${WORK}/datasets_main/CESM/CESM_PI_GMD2020EXCPL_1stSPINUP/TREFHT_B1850BPRP.forpub2018.01.hlrn.cam.h1.0291to0300_std.nc
 
-heatflux_file=${WORK}/datasets_main/heatflux/heatflx_GRN_20km.nc
-topography_file=${WORK}/datasets_main/ETOPO/ETOPO1_GRN_20km_polar.nc
-oceankill_file=${WORK}/datasets_main/oceankillmask/GRN_ocean_kill_20km.nc
+heatflux_file=${WORK}/datasets_main/heatflux/heatflx_NHEM_20km.nc
+topography_file=${WORK}/datasets_main/ETOPO/ETOPO1_NHEM_20km_polar.nc
+oceankill_file=${WORK}/datasets_main/oceankillmask/NHEM_ocean_kill_20km.nc
 
 $(prefix)_4PISM_$(gridname)km.nc: $(prefix)_CAM_$(gridname)km.nc $(prefix)_ocean_$(gridname)km.nc  $(topography_file) $(heatflux_file)
 	# oceankillmask has no lat_bnds and lon_bnds and so it can not easily be merged.
